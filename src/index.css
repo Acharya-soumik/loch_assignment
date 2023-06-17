@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url(./assets/fonts/Inter-Medium.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "InterSemiBold";
+  src: local("InterSemiBold"),
+    url(./assets/fonts/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "InterBold";
+  src: local("InterBold"), url(./assets/fonts/Inter-Bold.ttf) format("truetype");
+  font-weight: 800;
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
+.header {
+  font-size: clamp(32px, 42px, 52px);
+  line-height: clamp(32px, 42px, 52px);
+  letter-spacing: 2px;
+}
+
+.desc {
+  font-size: clamp(16px, 18px, 22px);
+  font-weight: 500;
+  opacity: 0.7;
+}
